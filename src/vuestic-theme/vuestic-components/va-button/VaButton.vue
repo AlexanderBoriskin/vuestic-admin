@@ -154,6 +154,39 @@ export default {
 </script>
 
 <style lang='scss'>
+  :root {
+    --left-grad--success: #63e5b3;
+    --right-grad--success: #23e066;
+    --box-shadow--success: #23e066;
+    --focus--success: #23e066;
+    --left-grad--danger: #ff7455;
+    --right-grad--danger: #e34b4a;
+    --box-shadow--danger: #23e066;
+    --focus--danger: #23e066;
+    --left-grad--warning: #ffd72d;
+    --right-grad--warning: #feb900;
+    --box-shadow--warning: #23e066;
+    --focus--warning: #23e066;
+    --left-grad--info: #32b5e4;
+    --right-grad--info: #2c82e0;
+    --box-shadow--info: #23e066;
+    --focus--info: #23e066;
+    --left-grad--gray: #cdd0d5;
+    --right-grad--gray: #b4b6b9;
+    --box-shadow--gray: #23e066;
+    --focus--gray: #23e066;
+    --left-grad--dark: #576675;
+    --right-grad--dark: #34495e;
+    --box-shadow--dark: #23e066;
+    --focus--dark: #23e066;
+    //--danger-hover-gradient: linear-gradient(to right, lighten(var(--left-grad--danger), 15%), lighten(var(--right-grad--danger), 15%));
+    //--danger-hover-gradient: linear-gradient(to right, lighten(var(--left-grad--danger), 15%), lighten(var(--right-grad--danger), 15%));
+    //--warning-hover-gradient: linear-gradient(to right, lighten(var(--left-grad--warning), 15%), lighten(var(--right-grad--warning), 15%));
+    //--info-hover-gradient: linear-gradient(to right, lighten(var(--left-grad--info), 15%), lighten(var(--right-grad--info), 15%));
+    //--gray-hover-gradient: linear-gradient(to right, lighten(var(--left-grad--gray), 15%), lighten(var(--right-grad--gray), 15%));
+    //--dark-hover-gradient: linear-gradient(to right, lighten(var(--left-grad--dark), 15%), lighten(var(--right-grad--dark), 15%));
+  }
+
   @mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
     padding: $padding-y $padding-x;
     font-size: $font-size;
@@ -294,7 +327,7 @@ export default {
     $focus-color: nth($colors, 6);
 
     .va-button--#{$name}.va-button--default{
-      background-image: linear-gradient(to right, $gradient-color1, $gradient-color2);
+      background-image: linear-gradient(to right, var(--left-grad--#{$name}), var(--right-grad--#{$name}));
       box-shadow: $btn-box-shadow $box-shadow;
 
       &:hover {
@@ -308,7 +341,7 @@ export default {
       }
 
       &.va-button--disabled {
-        background-image: linear-gradient(to right, $gradient-color1, $gradient-color2);
+        background-image: linear-gradient(to right, var(--left-grad--#{$name}), var(--right-grad--#{$name}));
         @include va-disabled;
       }
     }
