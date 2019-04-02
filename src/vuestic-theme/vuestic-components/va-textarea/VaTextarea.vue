@@ -18,8 +18,8 @@
         {{ label }}
       </label>
       <textarea
-        style="resize: none"
         ref="input"
+        :style="{ resize: this.autogrow ? '' : 'none' }"
         class="py-1 px-2"
         :rows="rows"
         :placeholder="placeholder"
@@ -51,41 +51,29 @@ export default {
   name: 'va-textarea',
   extends: VaInput,
   components: {
-    VaInputWrapper
+    VaInputWrapper,
   },
   props: {
     rows: {
       type: Number,
-      default: 5
+      default: 5,
     },
     autogrow: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
   data () {
     return {
       currentValue: this.value,
-      isFocused: false
+      isFocused: false,
     }
   },
-  /* watch: {
-    autogrow(autogrow) {
-      console.log(autogrow)
-      if (autogrow === true) {
-        this.$nextTick(this.__adjustHeightDebounce)
-      }
-      else if (this.rows > 0) {
-        const inp = this.$refs.input
-        inp.style.height = 'auto'
-      }
-    }
-  }, */
   computed: {
     labelStyles () {
       return {
-        color: this.error ? this.$themes.danger : ''
+        color: this.error ? this.$themes.danger : '',
       }
-    }
+    },
   },
   methods: {
     clearContent () {
@@ -96,16 +84,14 @@ export default {
     updateFocusState (isFocused) {
       this.isFocused = isFocused
     },
-    /* __adjustHeight () {
-
+    adjustHeight () {
       const inp = this.$refs.input
-      inp.style.height = '1px'
       inp.style.height = inp.scrollHeight + 'px'
-    } */
+    },
   },
   created () {
     if (this.autogrow) {
-      // this.__adjustHeightDebounce = setInterval(this.__adjustHeight, 1000)
+      setInterval(this.adjustHeight, 100)
     }
   },
 }
@@ -127,7 +113,6 @@ export default {
         background-color: transparent;
         border-style: none;
         outline: none;
-        resize: none !important;
 
         &::placeholder {
           color: $brand-secondary;

@@ -7,6 +7,7 @@
     </VbContainer>
     <VbContainer title="Textarea With Placeholder">
       <va-textarea
+        autogrow
         v-model="empty"
         placeholder="Name"
       />
@@ -80,7 +81,7 @@ export default {
   components: {
     VaTextarea,
     VaButton,
-    VaIcon
+    VaIcon,
   },
   data () {
     return {
@@ -88,8 +89,8 @@ export default {
       text: 'The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through.',
       phone: '33 310-86-24',
       messages: ['Required field'],
-      errorMessages: ['Detailed error message']
+      errorMessages: ['Detailed error message'],
     }
-  }
+  },
 }
 </script>
