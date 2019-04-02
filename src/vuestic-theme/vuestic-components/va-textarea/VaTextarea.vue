@@ -18,6 +18,8 @@
         {{ label }}
       </label>
       <textarea
+        style="resize: none"
+        ref="input"
         class="py-1 px-2"
         :rows="rows"
         :placeholder="placeholder"
@@ -55,6 +57,9 @@ export default {
     rows: {
       type: Number,
       default: 5
+    },
+    autogrow: {
+      type: Boolean
     }
   },
   data () {
@@ -63,6 +68,18 @@ export default {
       isFocused: false
     }
   },
+  /* watch: {
+    autogrow(autogrow) {
+      console.log(autogrow)
+      if (autogrow === true) {
+        this.$nextTick(this.__adjustHeightDebounce)
+      }
+      else if (this.rows > 0) {
+        const inp = this.$refs.input
+        inp.style.height = 'auto'
+      }
+    }
+  }, */
   computed: {
     labelStyles () {
       return {
@@ -79,6 +96,17 @@ export default {
     updateFocusState (isFocused) {
       this.isFocused = isFocused
     },
+    /* __adjustHeight () {
+
+      const inp = this.$refs.input
+      inp.style.height = '1px'
+      inp.style.height = inp.scrollHeight + 'px'
+    } */
+  },
+  created () {
+    if (this.autogrow) {
+      // this.__adjustHeightDebounce = setInterval(this.__adjustHeight, 1000)
+    }
   },
 }
 </script>
@@ -99,6 +127,7 @@ export default {
         background-color: transparent;
         border-style: none;
         outline: none;
+        resize: none !important;
 
         &::placeholder {
           color: $brand-secondary;

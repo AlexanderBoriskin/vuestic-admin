@@ -1,15 +1,9 @@
 <template>
   <VbDemo>
-    <VbContainer title="Simple Input">
-      <va-input
-        v-model="empty"
-      />
-    </VbContainer>
-    <VbContainer title="Input Password">
-      <va-input
-        v-model="text"
-        type="password"
-      />
+    <VbContainer title="Design">
+      <div style="height: 200px; overflow-y: scroll">
+        <img src="http://i68.tinypic.com/ne84fs.png" alt="">
+      </div>
     </VbContainer>
     <VbContainer title="Input With Placeholder">
       <va-input
@@ -46,7 +40,6 @@
         label="Name"
       >
         <va-icon
-          class="pb-1"
           icon="fa fa-anchor"
         />
       </va-input>
@@ -56,7 +49,7 @@
         v-model="text"
         label="Name"
       >
-        <va-button small>
+        <va-button style="margin-right: 0;" small>
           Upload
         </va-button>
       </va-input>
@@ -67,7 +60,6 @@
         label="Name"
       >
         <va-icon
-          class="pb-1"
           slot="prepend"
           icon="fa fa-anchor"
         />
@@ -75,8 +67,8 @@
     </VbContainer>
     <VbContainer title="Removable Icon">
       <va-input
-        v-model="text"
         removable
+        v-model="text"
       >
       </va-input>
     </VbContainer>
