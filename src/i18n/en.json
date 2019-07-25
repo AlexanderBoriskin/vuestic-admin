@@ -360,7 +360,8 @@
   },
   "chips": {
     "chips": "Chips",
-    "badges": "Badges"
+    "badges": "Badges",
+    "countBadges": "Count Badges"
   },
   "navbar": {
     "messageUs": "Development inquiries:",

@@ -47,6 +47,26 @@
       </div>
 
       <div class="flex xs12">
+        <va-card :title="$t('chips.countBadges')">
+          <div class="row mt-1 mb-4">
+            <va-count-badge class="mr-4" :number="1">Statuses</va-count-badge>
+            <va-count-badge class="mr-4" :number="12">Statuses</va-count-badge>
+            <va-count-badge class="mr-4" :number="999">Statuses</va-count-badge>
+            <va-count-badge class="mr-4" :number="123456">Statuses</va-count-badge>
+            <va-count-badge class="mr-4" :number="123456789">Statuses</va-count-badge>
+            <va-count-badge class="mr-4" :number="12345678912345">Statuses</va-count-badge>
+          </div>
+          <div class="row">
+            <va-count-badge class="mr-4" :number="5" color="info">Statuses</va-count-badge>
+            <va-count-badge class="mr-4" :number="5" color="warning">Statuses</va-count-badge>
+            <va-count-badge class="mr-4" :number="5" color="success">Statuses</va-count-badge>
+            <va-count-badge class="mr-4" :number="5" color="gray">Statuses</va-count-badge>
+            <va-count-badge class="mr-4" :number="5" color="dark">Statuses</va-count-badge>
+          </div>
+        </va-card>
+      </div>
+
+      <div class="flex xs12">
         <va-card :title="$t('chips.badges')">
           <div class="row mb-3">
             <va-badge>
