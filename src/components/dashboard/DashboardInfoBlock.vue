@@ -8,7 +8,7 @@
           :key="idx"
         >
           <va-card class="mb-4" :color="info.color">
-            <p class="display-2 mb-0" style="color: white">{{ info.value }}</p>
+            <p class="display-2 mb-0" style="color: white;">{{ info.value }}</p>
             <p>{{$t('dashboard.info.' + info.text)}}</p>
           </va-card>
         </div>
@@ -80,7 +80,7 @@
     <va-modal v-model="modal">
       <div style="position: relative;">
         <va-button @click="showPrevImage" icon="fa fa-chevron-left" flat style="position: absolute; top: 50%;"/>
-        <va-button @click="showNextImage" icon="fa fa-chevron-right" flat style="position: absolute; top: 50%; right: 0"/>
+        <va-button @click="showNextImage" icon="fa fa-chevron-right" flat style="position: absolute; top: 50%; right: 0;"/>
         <transition>
           <img :src="images[currImage]" style="height: 50vh; max-width: 100%;">
         </transition>
@@ -142,7 +142,7 @@ export default {
     }
 
     @include media-breakpoint-down(xs) {
-      p:not(.display-2){
+      p:not(.display-2) {
         font-size: 0.875rem;
       }
     }
