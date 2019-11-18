@@ -438,6 +438,7 @@
       "firstName": "First Name",
       "lastName": "Last Name",
       "status": "Status",
+      "importance": "Importance",
       "country": "Country",
       "location": "Location"
     }

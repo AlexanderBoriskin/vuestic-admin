@@ -242,6 +242,7 @@
       "name": "Nombre",
       "firstName": "Nombre de pila",
       "lastName": "Apellido",
+      "importance": "Importancia",
       "status": "Estado",
       "country": "País"
     }

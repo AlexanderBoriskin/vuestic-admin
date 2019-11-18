@@ -234,6 +234,7 @@
       "name": "Nome",
       "firstName": "Primeiro nome",
       "lastName": "Último nome",
+      "importance": "Importância",
       "status": "Status",
       "country": "País"
     }

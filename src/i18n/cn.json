@@ -265,7 +265,9 @@
       "city": "城市",
       "email": "电子邮箱",
       "name": "姓名",
-      "score": "分数"
+      "score": "分数",
+      "importance": "重要性",
+      "status": "狀態"
     },
     "dataTable": {
       "noDataAvailable": "无可用数据"

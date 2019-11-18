@@ -60,7 +60,7 @@
 
     <div class="flex xs12 md6 xl3">
       <va-card
-        :image='images[0]'
+        :image='images[currImage]'
         square
         titleOnImage
       >

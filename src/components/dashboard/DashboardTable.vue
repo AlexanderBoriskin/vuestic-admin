@@ -120,6 +120,7 @@ export default {
       },
       {
         name: '__slot:starred',
+        title: this.$t('tables.headings.importance'),
         width: '20px',
       },
       {
